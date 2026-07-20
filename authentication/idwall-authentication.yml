@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.idwall.co/docs/api-how-to-use
+docs: https://docs.idwall.co/reference/por-onde-comecar
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  api_key_name: Authorization
+  oauth2_flows: []
+  notes: >-
+    IDwall uses a single per-account API authentication token passed in the
+    Authorization request header. The token is issued from the account
+    dashboard (Integração da API) and is only available to users granted the
+    "Escrita API" permission. There is no OAuth flow and no public sandbox
+    environment; a contracted token always runs against production.
+schemes:
+  - name: apiToken
+    type: apiKey
+    in: header
+    parameter_name: Authorization
+    description: >-
+      Per-account API token. Obtained from https://dashboard.idwall.co/api-integration
+      (menu "Integração da API"). Sent on every request in the Authorization header.
+    token_source: https://dashboard.idwall.co/api-integration
+    sources: [docs.idwall.co/reference/por-onde-comecar]
