@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.idwall.co/docs/api-how-to-use
+docs: https://docs.idwall.co/reference/por-onde-comecar
+format: custom-json
+envelope:
+  success: { fields: [result, status_code] }
+  error:   { fields: [error, message, status_code, validation] }
+  note: >-
+    Errors are returned as a JSON object with an "error" (short reason),
+    "message" (human-readable detail), the HTTP "status_code", and, for
+    validation failures, a "validation" object listing the offending payload
+    keys. This is NOT RFC 9457 application/problem+json.
+problems:
+  - status: 400
+    error: Bad Request
+    title: Payload validation failed
+    description: >-
+      A request parameter is missing, malformed, or not allowed. The response
+      "validation" object identifies the source (payload) and the offending keys.
+    remediation: Correct the request payload to match the matrix (matriz) input contract.
+  - status: 401
+    error: Unauthorized
+    title: Authentication failure
+    description: >-
+      The Authorization token is missing, incorrect, does not exist, or access
+      has not been released for the account.
+    remediation: Verify the API token from the dashboard and that Authorization is sent in the header.
+  - status: 404
+    error: Not Found
+    title: Resource / endpoint not found
+    description: >-
+      The requested protocol/report was not found, or the endpoint URL /
+      parameter is incorrect.
+    remediation: Check the endpoint URL and the identifier (e.g. protocolo) sent for lookup.
+  - status: 500
+    error: Internal Server Error
+    title: Internal server error
+    description: An unexpected server-side error occurred.
+    remediation: Contact suporte@idwall.co.

@@ -1,0 +1,17 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.idwall.co/docs/webhooks
+spec_type: Webhooks
+transport: http
+description: >-
+  IDwall provides webhook configurations that notify an integrator's endpoint
+  when a relevant event occurs on a report (relatorio) - for example when a
+  report's processing status changes. Webhooks are configured per account.
+docs: https://docs.idwall.co/docs/webhooks
+events:
+  - name: report.status_changed
+    trigger: A report (relatorio) changes processing status.
+    delivery: HTTP POST to the configured webhook endpoint.
+    note: >-
+      Event/payload catalog captured from the webhook overview; full field-level
+      schema was behind Cloudflare bot protection at capture time.

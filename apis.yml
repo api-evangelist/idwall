@@ -1,9 +1,30 @@
 aid: idwall
-name: IDWall
-description: IDWall is a company surfaced as a portfolio company of 500-global, ggv-capital and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+name: IDwall
+description: >-
+  IDwall (idwall.co) is a Brazilian identity verification, KYC, and anti-fraud
+  platform. Its REST API lets companies run background checks and consult public
+  data sources, validate documents such as the CNH (Brazilian driver's license),
+  assemble verification reports (relatorios) from configurable matrices
+  (matrizes), retrieve previously queried people (pessoas), and receive webhook
+  notifications when a report's status changes. Authentication is a per-account
+  API token passed in the Authorization header; the production base URL is
+  https://api-v2.idwall.co and all responses are JSON. There is no sandbox -
+  contracted tokens run against production. IDwall was backed by 500 Global and
+  GGV Capital.
 url: https://raw.githubusercontent.com/api-evangelist/idwall/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://idwall.co/static/favicon.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -13,10 +34,33 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Identity Verification
+- KYC
+- Fraud Prevention
+- Background Checks
+- Document Verification
+- Compliance
+- Onboarding
+- Brazil
+apis:
+- name: IDwall API v2
+  description: >-
+    RESTful JSON API for identity verification, background checks, public-data
+    consultation, document (CNH) validation, verification reports (relatorios)
+    built from configurable matrices (matrizes), people (pessoas) lookups, and
+    webhooks. Authentication is a per-account token in the Authorization header.
+  humanURL: https://docs.idwall.co
+  baseURL: https://api-v2.idwall.co
+  properties:
+  - type: Documentation
+    url: https://docs.idwall.co
+  - type: APIReference
+    url: https://docs.idwall.co/reference
+  - type: GettingStarted
+    url: https://docs.idwall.co/reference/por-onde-comecar
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +69,45 @@ maintainers:
 common:
 - type: Website
   url: https://idwall.co
+- type: DeveloperPortal
+  url: https://docs.idwall.co
+- type: Documentation
+  url: https://docs.idwall.co
+- type: APIReference
+  url: https://docs.idwall.co/reference
+- type: GettingStarted
+  url: https://docs.idwall.co/reference/por-onde-comecar
+- type: Blog
+  url: https://idwall.co/blog
+- type: Login
+  url: https://dashboard.idwall.co
+- type: Support
+  url: https://idwall.co/contato/
+- type: ChangeLog
+  url: https://docs.idwall.co/changelog
+- type: LLMsTxt
+  url: llms/idwall-llms.txt
+- type: Authentication
+  url: authentication/idwall-authentication.yml
+- type: ErrorCatalog
+  url: errors/idwall-problem-types.yml
+- type: Conventions
+  url: conventions/idwall-conventions.yml
+- type: Lifecycle
+  url: lifecycle/idwall-lifecycle.yml
+- type: ChangeLog
+  name: IDwall changelog artifact
+  url: changelog/idwall-changelog.yml
+- type: WellKnown
+  url: well-known/idwall-well-known.yml
+- type: DomainSecurity
+  url: security/idwall-domain-security.yml
+- type: Packages
+  url: packages/idwall-packages.yml
+- type: Webhooks
+  url: asyncapi/idwall-webhooks.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

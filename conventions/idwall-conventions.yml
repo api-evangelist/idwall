@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.idwall.co/docs/api-how-to-use
+docs: https://docs.idwall.co/reference/por-onde-comecar
+base_url: https://api-v2.idwall.co
+media_type: application/json
+authentication:
+  style: api-key
+  location: header
+  parameter: Authorization
+  ref: authentication/idwall-authentication.yml
+idempotency:
+  supported: false
+  note: No idempotency-key contract is documented.
+pagination:
+  documented: false
+  note: No cross-cutting pagination scheme documented in the public overview.
+versioning:
+  scheme: host-prefix
+  current: v2
+  base_host: api-v2.idwall.co
+  ref: lifecycle/idwall-lifecycle.yml
+error_envelope:
+  success_fields: [result, status_code]
+  error_fields: [error, message, status_code, validation]
+  ref: errors/idwall-problem-types.yml
+webhooks:
+  supported: true
+  description: >-
+    IDwall provides webhook configurations that notify the integrator when a
+    relevant event occurs on a report (relatório).
+  docs: https://docs.idwall.co/docs/webhooks
+  ref: asyncapi/idwall-webhooks.yml
+sandbox:
+  available: false
+  note: >-
+    IDwall documents that there is no sandbox/test environment; once contracted,
+    all requests run against production.
+rate_limit_signaling:
+  documented: false

@@ -1,0 +1,14 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.idwall.co/changelog
+url: https://docs.idwall.co/changelog
+scheme: readme-changelog
+current_version: v2
+entries:
+  - title: Welcome to IDwall products
+    url: https://docs.idwall.co/changelog/welcome-to-idwall-products
+    highlights: Developer hub and documentation for IDwall products.
+note: >-
+  IDwall publishes a dated changelog on its ReadMe-hosted docs. Full history was
+  not enumerable at capture time (docs behind Cloudflare bot protection); the
+  live changelog URL is the source of truth.

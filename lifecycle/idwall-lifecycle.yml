@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.idwall.co
+versioning:
+  scheme: host-prefix
+  current: v2
+  base_host: https://api-v2.idwall.co
+  docs: https://docs.idwall.co/reference/por-onde-comecar
+changelog:
+  url: https://docs.idwall.co/changelog
+  ref: changelog/idwall-changelog.yml
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No public deprecation policy or RFC 8594 Sunset/Deprecation header support found.
+sla:
+  url: null
+status_page: null
+status_page_note: >-
+  No dedicated public IDwall API status page was found (status.idwall.co does not
+  resolve). The docs mention a "Status" section describing the health of the
+  underlying data sources, not an uptime status page.
+sandbox:
+  available: false

@@ -1,0 +1,16 @@
+generated: '2026-07-19'
+method: searched
+source: registry search (npm, PyPI, Packagist, RubyGems)
+note: >-
+  No first-party IDwall SDK was found on the public registries. The libraries
+  below are third-party/community wrappers of the IDwall API; none is officially
+  maintained by IDwall, so no SDKs pointer is emitted.
+packages:
+  - language: php
+    registry: packagist
+    name: wedevbr/idwall-laravel
+    url: https://packagist.org/packages/wedevbr/idwall-laravel
+    install: composer require wedevbr/idwall-laravel
+    official: false
+    description: Community "ID Wall API Wrapper for Laravel".
+first_party_sdks: []
